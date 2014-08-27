@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   resources :posts do 
     resources :comments
   end 
-
   get 'pages/events'
   get 'pages/care'
   get 'pages/contact'
