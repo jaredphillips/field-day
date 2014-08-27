@@ -1,0 +1,16 @@
+<h2>Come and See Me - Events</h2>
+
+<% @events.each do |event| %>
+  <h3><%= link_to event.title, event %></h3>
+  <h3><%= event.date %></h3>
+  <p><%= event.location %></p>
+  <%= image_tag event.image_url %>
+  <p><%= event.description %></p>
+  <p>
+    <%= link_to 'Show', event %> | 
+    <%= link_to 'Edit', edit_event_path(event) %> | 
+    <%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </p>
+<% end %>
+
+<%= link_to 'New Event', new_event_path %>
