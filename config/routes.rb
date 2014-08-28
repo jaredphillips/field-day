@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
 
+  resources :users
+
   resources :events
 
   resources :posts do 
     resources :comments
   end 
+
+  match '/blog',    to: 'posts#index',    via: 'get'
+
   get 'pages/events'
   get 'pages/care'
   get 'pages/contact'
