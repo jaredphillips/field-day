@@ -122,11 +122,10 @@ div.main-banner {
 }
 
 div.carousel-container {
-	background-color: #F0F4F4;
 	div.carousel {
-		article {
-			.carousel-photo {
-				height: 400px;
+		div.carousel-item {
+			img.carousel-photo {
+				height: 300px;
 			}
 			h3 {}
 			p {}
