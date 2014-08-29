@@ -123,26 +123,48 @@ div.main-banner {
 
 div.carousel-container {
 	background-color: #F0F4F4;
-	height: 600px;
-	overflow-x: hidden;
-	overflow-y: scroll;
-	width: 2100px;
+	height: 650px;
+	white-space: nowrap;
+	overflow-y: hidden;
+	overflow-x: scroll;
+	-webkit-overflow-scrolling: touch;
 	ul.carousel {
 		list-style-type: none;
 		li {
 			display: inline-block;
-			div.carousel-item {
-				width: 400px;
-				img.carousel-photo {
-				height: 300px;
-				}
-				h3 {
-					text-align: center;
+			a.carousel-link {
+				text-decoration: none;
+				transition: .5s;
+				div.carousel-item {
+					background-color: white;
+					height: 550px;
+					margin: 30px 10px;
 					width: 400px;
+					img.carousel-photo {
+					height: 300px;
+					}
+					h3 {
+						margin-top: 50px;
+						text-align: center;
+						width: 400px;
+						font-size: 2em;
+						font-weight: 400;
+						font-family: 'Source Sans Pro', sans-serif;
+					}
+					p {
+						white-space: normal;
+						text-align: center;
+						line-height: 2.5em;
+						font-weight: 300;
+						width: 400px;
+						font-size: 1.4em;
+						font-family: 'Source Sans Pro', sans-serif;
+					}
 				}
-				p {
-					width: 400px;
-				}
+			}
+			a.carousel-link:hover {
+				color: $pink;
+				transition: .5s;
 			}
 		}
 	}
