@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  get 'sessions/new'
+
+  get 'sessions/create'
+
+  get 'sessions/destroy'
+
+  resources :sessions, only: [:new, :create, :destroy]
+
   resources :users
 
   resources :events
@@ -8,7 +16,10 @@ Rails.application.routes.draw do
     resources :comments
   end 
 
-  match '/blog',    to: 'posts#index',    via: 'get'
+  match '/blog',     to: 'posts#index',         via: 'get'
+  match '/signup',   to: 'users#new',           via: 'get'
+  match '/signin',   to: 'sessions#new',        via: 'get'
+  match '/signout',  to: 'sessions#destroy',    via: 'delete'  
 
   get 'pages/events'
   get 'pages/care'

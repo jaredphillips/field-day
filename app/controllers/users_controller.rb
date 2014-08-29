@@ -11,6 +11,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      sign_in @user
       flash[:success] = "Field Day Terrariums Welcomes You!"
       redirect_to @user
     else
@@ -31,6 +32,8 @@ class UsersController < ApplicationController
   end
 
   def destroy
+    sign_out
+    redirect_to root_url
   end
 
   private

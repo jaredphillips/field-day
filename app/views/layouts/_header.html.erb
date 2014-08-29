@@ -6,6 +6,9 @@
 			<li><%= link_to "Come See Me", events_path %></li>
 			<li><%= link_to "Terrarium Care", pages_care_path %></li>
 			<li><%= link_to "Contact", pages_contact_path %></li>
+			<% if signed_in? %>
+				<%= link_to "Sign out", signout_path, method: "delete" %>
+			<% end %>
 		</ul>
 	</nav>
 
