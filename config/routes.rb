@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  mount Bootsy::Engine => '/bootsy', as: 'bootsy'
   # Mercury::Engine.routes
   # Mercury::Engine.routes
   resources :sessions, only: [:new, :create, :destroy]
