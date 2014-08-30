@@ -193,8 +193,13 @@ a.fancybox {
 			display: block;
 			margin: 0 auto;
 			padding: 15px;
-			border: 4px solid rgb(253, 244, 228);
+			border: 5px solid rgb(253, 244, 228);
 			margin-bottom: 30px;
+			transition: .5s;
+		}
+		img.finished-images-small:hover {
+			border: 5px solid $pink;
+			transition: .5s;
 		}
 		h3 {
 			text-align: center;
@@ -211,7 +216,7 @@ a.fancybox:hover {
 }
 
 footer {
-	height: 580px;
+	height: 730px;
 	background-color: #2B252C;
 	border-top: 40px solid #F0F4F4;
 }
@@ -237,7 +242,7 @@ section.footer-contact {
 		margin: 90px auto;
 		width: 500px;
 		li {
-			padding: 20px 40px;
+			padding: 10px 36px;
 			display: inline-block;
 			a.icon {
 				font-size: 3em;
@@ -253,4 +258,20 @@ section.footer-contact {
 	}
 }
 
+section.copyright {
+	ul.copyright-menu {
+		list-style-type: none;
+		text-align: center;
+		li {
+			margin: 0 20px;
+			font-weight: 300;
+			font-size: 1em;
+			display: inline-block;
+			color: #F0F4F4;
+			a {
+				color: #F0F4F4;
+			}
+		}
+	}
+}
 
