@@ -27,11 +27,24 @@ div.header {
 	height: 800px;
 }
 
+div.alternate-header {
+	background: url("bg.jpg") no-repeat center center fixed;
+	background-size: cover;
+	height: 260px;
+}
+
+h1.alt-heading {
+	text-align: center;
+	color: white;
+	font-weight: 400;
+	font-size: 4em;
+}
+
 
 ul.nav-list {
 	list-style-type: none;
 	margin: 0;
-	padding: 42px 0;
+	padding: 42px 0 0 0;
 	text-align: center;
 	li {
 		display: inline;
