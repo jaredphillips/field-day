@@ -9,6 +9,7 @@
 	<p class="published">
 		Posted: <%= time_ago_in_words @post.created_at %> ago
 	</p>
+		<%= image_tag @post.image_url(:thumb).to_s %>
 	  <%= simple_format @post.body, class: "post-body" %>
 
 	<% if signed_in? %>

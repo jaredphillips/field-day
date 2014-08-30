@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  # Mercury::Engine.routes
+  # Mercury::Engine.routes
   resources :sessions, only: [:new, :create, :destroy]
   resources :users
   resources :events
