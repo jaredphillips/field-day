@@ -24,14 +24,14 @@ div.blog-container {
 		color: $pink;
 		font-size: 2.5em;
 		font-weight: 300;
-		margin-top: -60px;
+		margin-top: -10px;
 		margin-left: 30px;
 	}
 	p.published {
 		text-align: right;
 		font-weight: 300;
 		font-size: 1.5em;
-		margin-top: -40px;
+		margin-top: -10px;
 		margin-left: 220px;
 	}
 	.post-body {
@@ -42,14 +42,18 @@ div.blog-container {
 	}
 }
 
-a.new-post-button {
-	color: white;
-	padding: 20px;
-	background-color: #DF7366;
-	text-decoration: none;
-	font-weight: 300;
-	border-radius: 15px;
-	transition: .5s;
+div.button-container {
+	margin-bottom: 50px;
+	a.new-post-button {
+		color: white;
+		padding: 20px 40px;
+		background-color: #DF7366;
+		text-decoration: none;
+		font-weight: 300;
+		border-radius: 10px;
+		transition: .5s;
+		font-size: 1.4em;
+	}
 }
 
 a.new-post-button:hover {
@@ -147,6 +151,16 @@ input#button {
 input#button:hover {
 	background-color: $pink;
 	transition: .5s;
+}
+
+div.blog-post {
+	background-color: lightgrey;
+	width: 80%;
+	height: 900px;
+	margin: 0 auto;
+	div.field {
+
+	}
 }
 
 *:focus {

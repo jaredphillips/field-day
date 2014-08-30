@@ -1,13 +1,16 @@
 <%= form_for @post do |f| %>
-
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-
-    <%= f.label :byline %>
-    <%= f.text_field :byline %>
-
-    <%= f.label :body %>
+  <div class="blog-post">
+    <div class="field">
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </div>
+    <div class="field">
+      <%= f.label :byline %>
+      <%= f.text_field :byline %>
+    </div>
+    
     <%= f.bootsy_area :body %>
 
     <%= f.submit %>
+  </div>
 <% end %>

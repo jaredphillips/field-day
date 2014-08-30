@@ -15,6 +15,6 @@
  *= require fancybox
  *= require font-awesome
  *= require bootsy
- *= require bootstrap
+ *= require bootstrap.min
  *= require_self
  */
