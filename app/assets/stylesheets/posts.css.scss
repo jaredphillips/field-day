@@ -1,7 +1,6 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
 $pink: #FFC0CB;
 
 div.blog-container {
@@ -63,14 +62,93 @@ ul.user-links {
 	li {
 		display: inline-block;
 		margin: 5px;
-		a.user-link {
-			color: black;
-			text-decoration: none;
-		}
-		a.user-link:hover {
-			text-decoration: underline;
+	}
+}
+
+a.user-link {
+	color: black;
+	text-decoration: none;
+}
+a.user-link:hover {
+	text-decoration: underline;
+}
+
+
+div.comments-container {
+	h3 {
+		font-size: 3em;
+	}
+	p.commenter {
+		padding-bottom: 20px;
+		padding-left: 2%;
+		font-size: 1.1em;
+		font-weight: 300;
+		color: $pink;
+	}
+	p.comment {
+		padding-top: 20px;
+		padding-left: 2%;
+		border-top: 1px dotted $pink;
+		font-size: 2em;
+		font-weight: 300;
+	}
+}
+
+div.comment-form-container {
+	border-top: 1px dotted black;
+	margin-top: 20px;
+	text-align: center;
+	ul.comment-form {
+		width: 200px;
+		list-style-type: none;
+		li.comment-form-inputs {
+			padding: 10px;
 		}
 	}
 }
 
+input#comment_username {
+	height: 40px;
+	line-height: 40px;
+	font-size: 30px;
+	-webkit-appearance: none; 
+	border: 2px solid $pink;	
+	width: 600px;
+}
 
+input#comment_username:focus {
+	border-bottom: 4px solid $pink;
+}
+
+textarea#comment_text {
+	line-height: 40px;
+	font-size: 30px;
+	border: 2px solid $pink;
+	width: 600px;
+}
+
+textarea#comment_text:focus {
+	border: 4px solid $pink;
+	width: 600px;
+}
+
+input#button {
+	width: 130px;
+	height: 50px;
+	outline: 0;
+	background: none;
+	border: 0;
+	padding: 15px;
+	border-radius: 10px;
+	background-color: #DF7366;
+	transition: .5s;
+}
+
+input#button:hover {
+	background-color: $pink;
+	transition: .5s;
+}
+
+*:focus {
+  outline: 0;  
+}

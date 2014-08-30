@@ -13,31 +13,41 @@
 
 	<% if signed_in? %>
 		<p class="posts-user-links">
-			<%= link_to 'Edit', edit_post_path(@post) %> |
-			<%= link_to 'Back', posts_path %> |
-			<%= link_to 'Delete Blog Post', @post, method: :delete, data: { confirm: "Are you sure?" } %>
+			<%= link_to 'Edit', edit_post_path(@post), class: "user-link" %> |
+			<%= link_to 'Back', posts_path, class: "user-link" %> |
+			<%= link_to 'Delete Blog Post', @post, method: :delete, data: { confirm: "Are you sure?" }, class: "user-link" %>
 		</p>
 	<% end %>
-
-	<h3>Got a question or a comment?</h3>
-	<% @post.comments.each do |comment| %>
-		<p>Posted by <%= comment.username %> <%= time_ago_in_words comment.created_at %> ago</p>
-		<p><%= comment.text %></p>
-	  <p><%= link_to 'Delete Comment', [@post, comment], method: :delete, data: { confirm: "Are you sure?" } %></p>
-	<% end %>
+	<div class="comments-container">
+		<h3>Got a question or a comment?</h3>
+		<% @post.comments.each do |comment| %>
+			<p class="comment"><%= comment.text %></p>
+			<p class="commenter">Posted by <%= comment.username %> <%= time_ago_in_words comment.created_at %> ago</p>
+			<% if signed_in? %>
+			  <%= link_to 'Delete Comment', [@post, comment], method: :delete, data: { confirm: "Are you sure?" }, class: "user-link" %>
+		  <% end %>
+		<% end %>
+	</div>
 
 	<%= form_for [@post, @post.comments.build] do |f| %>
-		<ul>
-			<li>
-				<%= f.label :username, "Name" %>
-				<%= f.text_field :username %>
-			</li>
-			<li>
-			  <%= f.text_area :text, size: "30x10" %>
-		  </li>
-		  <li>
-			  <%= f.submit "Post Comment" %>
-		  </li>
-		</ul>
+		<div class="comment-form-container">
+			<ul class="comment-form">
+				<li class="comment-form-inputs">
+					<%= f.label :username, "Name" %>
+				</li>
+				<li class="comment-form-inputs">
+					<%= f.text_field :username %>
+				</li>
+				<li class="comment-form-inputs">
+					<%= f.label :text, "Your Comment" %>
+				</li>
+				<li class="comment-form-inputs">
+				  <%= f.text_area :text, size: "30x10" %>
+			  </li>
+			  <li class="comment-form-button">
+				  <%= f.submit "Post Comment", id: "button" %>
+			  </li>
+			</ul>
+		</div>
 	<% end %>
 </div>

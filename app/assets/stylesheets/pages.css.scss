@@ -325,3 +325,19 @@ section.copyright {
 	}
 }
 
+#error_explanation {
+	h2 {
+		text-align: center;
+		font-weight: 300;
+		font-size: 2em;
+	}
+}
+
+div.alert {
+	margin-top: 25px;
+	padding: 10px;
+	border: 1px solid $pink;
+	text-align: center;
+	font-weight: 300;
+	font-size: 2em;
+}
