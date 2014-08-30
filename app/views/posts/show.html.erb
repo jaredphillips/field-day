@@ -9,15 +9,16 @@
 	<p class="published">
 		Posted: <%= time_ago_in_words @post.created_at %> ago
 	</p>
+	<p>
 		<%= image_tag @post.image_url(:thumb).to_s %>
 	  <%= simple_format @post.body, class: "post-body" %>
-
+	</p>
 	<% if signed_in? %>
-		<p class="posts-user-links">
-			<%= link_to 'Edit', edit_post_path(@post), class: "user-link" %> |
-			<%= link_to 'Back', posts_path, class: "user-link" %> |
-			<%= link_to 'Delete Blog Post', @post, method: :delete, data: { confirm: "Are you sure?" }, class: "user-link" %>
-		</p>
+		<ul class="user-links pull-right">
+			<li><%= link_to 'Edit', edit_post_path(@post), class: "user-link" %></li>
+			<li><%= link_to 'Back ', posts_path, class: "user-link" %></li>
+			<li><%= link_to 'Delete Blog Post', @post, method: :delete, data: { confirm: "Are you sure?" }, class: "user-link" %></li>
+		</ul>
 	<% end %>
 	<div class="comments-container">
 		<h3>Got a question or a comment?</h3>
