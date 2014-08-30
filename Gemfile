@@ -27,7 +27,7 @@ gem 'fancybox2-rails', '~> 0.2.8'
 gem "font-awesome-rails"
 
 # WYSIWYG for Blog and other pages.
-gem 'mercury-rails'
+# gem 'mercury-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 
