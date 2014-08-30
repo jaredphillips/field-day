@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :body %><br>
-    <%= f.text_area :body %>
+    <%= raw f.text_area :body, :rows => 8 %>
   </div>
   <div class="actions">
     <%= f.submit %>

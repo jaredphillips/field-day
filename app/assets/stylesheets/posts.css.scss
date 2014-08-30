@@ -1,3 +1,75 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$pink: #FFC0CB;
+
+div.blog-container {
+	margin: 50px 10%;
+	h2.title {
+		border-top: 1px solid $pink;
+		padding-top: 20px;
+		font-weight: 300;
+		font-size: 4em;
+		a.index-title-link {
+			text-decoration: none;
+			color: black;
+			transition: .5s;
+		}
+		a.index-title-link:hover {
+			color: #df7366;
+			transition: .5s;
+		}
+	}
+	h3.byline {
+		color: $pink;
+		font-size: 2.5em;
+		font-weight: 300;
+		margin-top: -60px;
+		margin-left: 30px;
+	}
+	p.published {
+		font-weight: 300;
+		font-size: 1.5em;
+		margin-top: -50px;
+		margin-left: 220px;
+	}
+	.post-body {
+		margin-top: 60px;
+		font-size: 1.7em;
+		font-weight: 300;
+		line-height: 1.8em;
+	}
+}
+
+a.new-post-button {
+	color: white;
+	padding: 20px;
+	background-color: #DF7366;
+	text-decoration: none;
+	font-weight: 300;
+	border-radius: 15px;
+	transition: .5s;
+}
+
+a.new-post-button:hover {
+	background-color: $pink;
+	transition: .5s;
+	color: black;
+}
+
+ul.user-links {
+	li {
+		display: inline-block;
+		margin: 5px;
+		a.user-link {
+			color: black;
+			text-decoration: none;
+		}
+		a.user-link:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+

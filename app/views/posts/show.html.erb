@@ -1,41 +1,43 @@
 <%= provide(:title, "Blog") %>
-<h2>
-  <%= @post.title %>
-</h2>
-<h3>
-  <%= @post.byline %>
-</h3>
-<p>
-	Posted: <%= time_ago_in_words @post.created_at %> ago
-</p>
-<p>
-  <%= @post.body %>
-</p>
+<div class="blog-container">
+	<h2 class="title">
+	  <%= @post.title %>
+	</h2>
+	<h3 class="byline">
+	  <%= @post.byline %>
+	</h3>
+	<p class="published">
+		Posted: <%= time_ago_in_words @post.created_at %> ago
+	</p>
+	  <%= simple_format @post.body, class: "post-body" %>
 
-<p>
-	<%= link_to 'Edit', edit_post_path(@post) %> |
-	<%= link_to 'Back', posts_path %> |
-	<%= link_to 'Delete Blog Post', @post, method: :delete, data: { confirm: "Are you sure?" } %>
-</p>
+	<% if signed_in? %>
+		<p class="posts-user-links">
+			<%= link_to 'Edit', edit_post_path(@post) %> |
+			<%= link_to 'Back', posts_path %> |
+			<%= link_to 'Delete Blog Post', @post, method: :delete, data: { confirm: "Are you sure?" } %>
+		</p>
+	<% end %>
 
-<h3>Got a question or a comment?</h3>
-<% @post.comments.each do |comment| %>
-	<p>Posted by <%= comment.username %> <%= time_ago_in_words comment.created_at %> ago</p>
-	<p><%= comment.text %></p>
-  <p><%= link_to 'Delete Comment', [@post, comment], method: :delete, data: { confirm: "Are you sure?" } %></p>
-<% end %>
+	<h3>Got a question or a comment?</h3>
+	<% @post.comments.each do |comment| %>
+		<p>Posted by <%= comment.username %> <%= time_ago_in_words comment.created_at %> ago</p>
+		<p><%= comment.text %></p>
+	  <p><%= link_to 'Delete Comment', [@post, comment], method: :delete, data: { confirm: "Are you sure?" } %></p>
+	<% end %>
 
-<%= form_for [@post, @post.comments.build] do |f| %>
-	<ul>
-		<li>
-			<%= f.label :username, "Name" %>
-			<%= f.text_field :username %>
-		</li>
-		<li>
-		  <%= f.text_area :text, size: "30x10" %>
-	  </li>
-	  <li>
-		  <%= f.submit "Post Comment" %>
-	  </li>
-	</ul>
-<% end %>
+	<%= form_for [@post, @post.comments.build] do |f| %>
+		<ul>
+			<li>
+				<%= f.label :username, "Name" %>
+				<%= f.text_field :username %>
+			</li>
+			<li>
+			  <%= f.text_area :text, size: "30x10" %>
+		  </li>
+		  <li>
+			  <%= f.submit "Post Comment" %>
+		  </li>
+		</ul>
+	<% end %>
+</div>

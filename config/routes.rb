@@ -1,29 +1,23 @@
 Rails.application.routes.draw do
 
-  get 'sessions/new'
-
-  get 'sessions/create'
-
-  get 'sessions/destroy'
-
   resources :sessions, only: [:new, :create, :destroy]
-
   resources :users
-
   resources :events
 
   resources :posts do 
     resources :comments
   end 
 
-  match '/blog',     to: 'posts#index',         via: 'get'
-  match '/signup',   to: 'users#new',           via: 'get'
-  match '/signin',   to: 'sessions#new',        via: 'get'
-  match '/signout',  to: 'sessions#destroy',    via: 'delete'  
+  match '/blog',            to: 'posts#index',         via: 'get'
+  match '/signup',          to: 'users#new',           via: 'get'
+  match '/signin',          to: 'sessions#new',        via: 'get'
+  match '/signout',         to: 'sessions#destroy',    via: 'delete'
+  match '/terrarium-care',  to: 'pages#care',          via: 'get'
 
   get 'pages/events'
   get 'pages/care'
   get 'pages/contact'
+  get 'pages/gallery'
 
   root 'pages#home'
 
