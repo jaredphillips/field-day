@@ -23,6 +23,9 @@ gem 'jquery-rails'
 # Fancybox for terrarium showcase on main page
 gem 'fancybox2-rails', '~> 0.2.8'
 
+# Icons by Font Awesome
+gem "font-awesome-rails"
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 
 gem 'turbolinks'
