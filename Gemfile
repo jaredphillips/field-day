@@ -26,9 +26,6 @@ gem 'fancybox2-rails', '~> 0.2.8'
 # Icons by Font Awesome
 gem "font-awesome-rails"
 
-# For Heroku deployment, oh joy!
-gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
-
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 
 gem 'turbolinks'

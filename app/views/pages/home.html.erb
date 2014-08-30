@@ -14,7 +14,7 @@
 <div class="carousel-container">
 	<ul class="carousel">
 		<li>
-			<a href="#" class="carousel-link">
+			<a href="#showcase" class="carousel-link">
 				<div class="carousel-item">
 					<%= image_tag "carousel-1.jpg", class: "carousel-photo", alt: "carousel-photo"%>
 					<h3>Finished Environments</h3>
@@ -23,7 +23,7 @@
 			</a>
 		</li>
 		<li>
-			<a href="#" class="carousel-link">
+			<a href="<%= pages_care_path %>" class="carousel-link">
 				<div class="carousel-item">
 					<%= image_tag "carousel-2.jpg", class: "carousel-photo", alt: "carousel-photo"%>
 					<h3>Caring for Your New Terrarium</h3>
@@ -32,36 +32,30 @@
 			</a>
 		</li>
 		<li>
-			<a href="#" class="carousel-link">
-				<div class="carousel-item">
-					<%= image_tag "carousel-3.jpg", class: "carousel-photo", alt: "carousel-photo"%>
-					<h3>A Work in Progress</h3>
-					<p>I’m working to make dirt under the fingernails the newest and hottest look this season.</p>
-				</div>
-			</a>
+			<div class="carousel-item">
+				<%= image_tag "carousel-3.jpg", class: "carousel-photo", alt: "carousel-photo"%>
+				<h3>A Work in Progress</h3>
+				<p>I’m working to make dirt under the fingernails the newest and hottest look this season.</p>
+			</div>
 		</li>
 		<li>
-			<a href="#" class="carousel-link">
-				<div class="carousel-item">
-					<%= image_tag "carousel-4.jpg", class: "carousel-photo", alt: "carousel-photo"%>
-					<h3>My Tools</h3>
-					<p>A variety of tools collected from all over the place help with production. Get creative!</p>
-				</div>
-			</a>
+			<div class="carousel-item">
+				<%= image_tag "carousel-4.jpg", class: "carousel-photo", alt: "carousel-photo"%>
+				<h3>My Tools</h3>
+				<p>A variety of tools collected from all over the place help with production. Get creative!</p>
+			</div>
 		</li>
 		<li>
-			<a href="#" class="carousel-link">
-				<div class="carousel-item">
-					<%= image_tag "carousel-5.jpg", class: "carousel-photo", alt: "carousel-photo"%>
-					<h3>Scenes</h3>
-					<p>Miniature people doing miniature things combined with elements straight from nature.</p>
-				</div>
-			</a>
+			<div class="carousel-item">
+				<%= image_tag "carousel-5.jpg", class: "carousel-photo", alt: "carousel-photo"%>
+				<h3>Scenes</h3>
+				<p>Miniature people doing miniature things combined with elements straight from nature.</p>
+			</div>
 		</li>
 	</ul>
 </div>
 			
-<section class="showcase">
+<section id="showcase" class="showcase">
 	<h2>Finished Environments</h2>
 	<ul class="rows">
 		<li>
@@ -138,3 +132,4 @@
 		</li>
 	</ul>
 </section>
+

@@ -1,0 +1,7 @@
+<script type="text/javascript">
+	$("#smooth").click(function(){
+    var helloId = $(this).attr("href");
+    $("body").animate({scrollTop: $(helloId).offset().top}, "slow");
+    return false
+	});
+</script>

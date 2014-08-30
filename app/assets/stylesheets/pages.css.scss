@@ -42,6 +42,11 @@ ul.nav-list {
 			color: $pink;
 			display: inline-block;
 			padding: 0 29px;
+			transition: .5s;
+		}
+		a:hover {
+			transition: .5s;
+			color: white;
 		}
 	}
 }
@@ -127,6 +132,7 @@ div.carousel-container {
 	overflow-y: hidden;
 	overflow-x: scroll;
 	-webkit-overflow-scrolling: touch;
+	color: black;
 	ul.carousel {
 		list-style-type: none;
 		li {
@@ -167,14 +173,45 @@ div.carousel-container {
 	}
 }
 
+div.carousel-item {
+	background-color: white;
+	height: 550px;
+	margin: 30px 10px;
+	width: 400px;
+	transition: .5s;
+	img.carousel-photo {
+		height: 300px;
+	}
+	h3 {
+		margin-top: 50px;
+		text-align: center;
+		width: 400px;
+		font-size: 1.4em;
+		font-weight: 400;
+	}
+	p {
+		white-space: normal;
+		text-align: center;
+		line-height: 1.9em;
+		font-weight: 300;
+		width: 400px;
+		font-size: 1.1em;
+	}
+}
+
+div.carousel-item:hover {
+	color: $pink;
+	transition: .5s;
+}
+
 section.showcase {
 	background-color: white;
 	h2 {
 		text-align: center;
 		font-weight: 400;
-		padding-top: 80px;
+		padding-top: 30px;
 		font-size: 4.6em;
-		padding-bottom: 60px;
+		padding-bottom: -20px;
 	}
 	ul.rows {
 		list-style-type: none;
