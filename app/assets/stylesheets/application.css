@@ -16,4 +16,5 @@
  *= require font-awesome
  *= require_self
  *= require bootsy
+ *= require bootstrap.min
  */
